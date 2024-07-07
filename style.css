@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    color: black;
+}
+
+#header{
+    width: 100%;
+    height: 110vh;
+    background-image: url(Img/Background.png);
+    background-size: cover;
+    background-position: center;
+
+}
+.container {
+    padding: 10px 10%;
+    background-color: #F9F8FF;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo img {
+    width: 140px;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a {
+    color: #1E1676;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.5s, background-color 0.5s, padding 0.5s;
+    display: inline-block;
+    border-radius: 15px;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #875FFE;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s;
+}
+nav ul li a:hover {
+    color: #8E6BF9;
+    background-color: #E8E2FE;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    padding: 2px;
+    border-radius: 30%;
+}
+.social-icons img:hover {
+    transform: scale(1.2);
+    background-color: #E8E2FE;
+}
+
+
+.header-text h1 {
+font-size: 70px;
+text-align: center;
+font-family: "Water Brush", cursive;
+font-style: normal;
+color: #1E1676;
+margin-top: 100px;
+}
+.header-text h2 {
+    font-size: 90px;
+    text-align: center;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.header-text h3 {
+    font-size: 90px;
+    text-align: center;
+    font-weight: 1000;
+    color: #ffffff;
+    text-shadow: 10px 15px 20px #00000033;}
+
+/*------------------Work-------------------*/
+.Work1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Work1 ul {
+    padding: 0;
+    display: inline-block;
+}
+
+.Work1 ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    white-space: nowrap;
+}
+
+.Work1 ul li a {
+    color: #1E1676;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-left: 2%;
+}
+
+.Work1 ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #875FFE;
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjusted to be closer to the text */
+    transition: width 0.5s;
+}
+
+.Work1 ul li a:hover {
+    color: #875FFE;
+}
+
+.Work1 ul li a::before {
+    content: attr(data-hover);
+    font-weight: bold;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+}
+
+.Work1 ul li a:hover::before {
+    visibility: visible;
+    width: auto;
+}
+
+.Work1 ul li a:hover::after {
+    width: 100%;
+}
+
+.Coffee-Connoisseur img{
+width: 500px;
+height: 100%;
+margin-left: 15%;
+margin-top: 2%;}
+
+.Coffee-Connoisseur h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #875FFE;
+    margin-left: 45%;
+    margin-top: -27%;}
+
+    .Coffee-Connoisseur p {
+        font-size: 16px;
+        color: #3F3F3F;
+        margin-top:1%;
+        margin-left: 45%;
+        margin-right: 20%;}
+
+        .Coffee-Connoisseur {
+            text-align: left; /* Aligns other text to the left */
+            position: relative;
+        }
+        .header-right {
+            margin-left: 45%;
+            margin-top: 20px; /* Adds some space above the headers */
+        }
+        .Coffee-Connoisseur h2, .Coffee-Connoisseur h3 {
+            font-size: 16px;
+            color: #8E6BF9;
+            background-color: #E8E2FE;
+            background-size: cover; /* Other options: contain, auto, or specific dimensions like 100% 50% */
+            background-position: center;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 0% 5px; /* Adjust the margin as needed */
+            display: inline-block;
+        }
+        .button{
+            display:inline-flex;
+            height:50px;
+            width: 200px;
+            margin-left: 45%;
+            margin-top: 1%;
+            font-size: 18px;
+            font-weight: bold;
+            padding:0;
+            border:none;
+            outline: none;
+            border-radius: 10px;
+            background: linear-gradient(110.71deg, #BC6AFD -0.31%, #875FFE 24.25%, #9F9EF6 50.63%, #875FFE 71.4%, #8752DD 95.84%);
+            box-shadow: 10px 10px 20px #00000033;
+        }
+    
+            .button-text{
+                color: #F9F8FF;
+                margin-top: 15px;
+                margin-left: 15px;
+            }
+            .button-icon{
+               width: 10PX; 
+            margin-left: 30%;
+            margin-top: 8px;
+            }
+        /*------------------BROS-------------------*/
+
+        .BROS img{
+            width: 500px;
+            height: 100%;
+            margin-left: 55%;
+            margin-top: 10%;}
+            
+            .BROS h1{
+                font-size: 40px;
+                font-weight: bold;
+                color: #875FFE;
+                margin-left: 20%;
+                margin-top: -27%;}
+            
+                .BROS p {
+                    font-size: 16px;
+                    color: #3F3F3F;
+                    margin-top:1%;
+                    margin-left: 20%;
+                    margin-right: 50%;}
+            
+                    .BROS {
+                        text-align: left; /* Aligns other text to the left */
+                        position: relative;
+                    }
+                    .header-Left {
+                        margin-left: 20%;
+                        margin-top: 20px; /* Adds some space above the headers */
+                    }
+                    .BROS h2, .BROS h3 {
+                        font-size: 16px;
+                        color: #8E6BF9;
+                        background-color: #E8E2FE;
+                        background-size: cover; /* Other options: contain, auto, or specific dimensions like 100% 50% */
+                        background-position: center;
+                        border-radius: 15px;
+                        padding: 10px;
+                        margin: 20PX 0%; /* Adjust the margin as needed */
+                        display: inline-block;
+                    }
+                    .button2{
+                        display:inline-flex;
+                        height:50px;
+                        width: 200px;
+                        margin-left: 20%;
+                        margin-top: 0%;
+                        font-size: 18px;
+                        font-weight: bold;
+                        padding:0;
+                        border:none;
+                        outline: none;
+                        border-radius: 10px;
+                        background: linear-gradient(110.71deg, #BC6AFD -0.31%, #875FFE 24.25%, #9F9EF6 50.63%, #875FFE 71.4%, #8752DD 95.84%);
+                        box-shadow: 10px 10px 20px #00000033;
+                    }
+                
+                        .button-text2{
+                            color: #F9F8FF;
+                            margin-top: 15px;
+                            margin-left: 15px;
+                        }
+                        .button-icon2{
+                        margin-left: 30%;
+                        margin-top: 8px;
+                        }
+
+       
