@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EK Creative Solutions</title>
+    <link rel="stylesheet" href="style business card.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Img/LOGO Eknoor Kaur.png" alt="EK Creative Solutions">
+                </div>
+                <ul>
+                    <li><a href="index.html">WORK</a></li>
+                    <li><a href="aboutme.html">ABOUT ME</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@Eknoor.UX.D" target="_blank">
+                        <img src="Img/Social Icons/youtube.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.behance.net/eknoor_uiux_designer" target="_blank">
+                        <img src="Img/Social Icons/behence.png" alt="Behance">
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                        <img src="Img/Social Icons/linkedin.png" alt="Linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/eknoor_uiux_designer/" target="_blank">
+                        <img src="Img/Social Icons/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div id="header2">
+        <div class="container2">
+            <nav>
+                <ul>
+                    <li><a href="index.html">UI/UX Design</a></li>
+                    <li><a href="Brochure.html">Brochure</a></li>
+                    <li><a href="Business Card.html">Business Card</a></li>
+                    <li><a href="Presentations.html">Presentations</a></li>
+                    <li><a href="Illustration.html">Illustration</a></li>
+                    <li><a href="Sketches.html">Sketches</a></li>
+                    <li><a href="Signature.html">Signature</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="background">
+            <img src="Img/Background.png" alt="Background Image">
+            <div class="header-text">
+                <h1 class="water-brush-regular">Stories To</h1>
+                <h2 class="water-brush-regular"></h2>
+                <h3 class="water-brush-regular">LIFE</h3>
+            </div>
+        </div>
+    </div>
+    
+ <!--------------Work--------->
+ <div id="Work">
+    <div class="Container Work1">
+
+
+
+<div class="container-contactme">
+    <div class="left-text">
+        <h1>Let's get</h1>
+        <h2>Connected</h2>
+    </div>
+    <div class="form-container">
+        <!---<h1>Send your message!</h1>--->
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name...">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email...">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message..."></textarea>
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
+
+        var activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+            activeSection.classList.add('active');
+        }
+    }
+</script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="Img/LOGO Eknoor Kaur.png" alt="Eknoor Kaur">
+        </div>
+        <div class="footer-contact">
+            <p>eknoor.ux.d@gmail.com</p>
+            <p>+1 (909) 401-6381</p>
+        </div>
+        <div class="footer-social-icons">
+            <a href="mailto:eknoor.ux.d@gmail.com"><img src="Img/Social Icons/gmail.png" alt="Gmail"></a>
+            <a href="https://www.linkedin.com/in/eknoor-kaur-801008196/"><img src="Img/Social Icons/linkedin-color.png" alt="LinkedIn"></a>
+            <a href="https://www.behance.net/eknoor_uiux_designer"><img src="Img/Social Icons/behence-color.png" alt="Behance"></a>
+            <a href="https://www.instagram.com/eknoor_uiux_designer//"><img src="Img/Social Icons/instagram -color.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 eknoorkaur. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EK Creative Solutions</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<style>
+    #notification {
+        display: none;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="Img/LOGO Eknoor Kaur.png" alt="EK Creative Solutions">
+                </div>
+                <ul>
+                    <li><a href="index.html">WORK</a></li>
+                    <li><a href="aboutme.html">ABOUT ME</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@Eknoor.UX.D" target="_blank">
+                        <img src="Img/Social Icons/youtube.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.behance.net/eknoor_uiux_designer" target="_blank">
+                        <img src="Img/Social Icons/behence.png" alt="Behance">
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                        <img src="Img/Social Icons/linkedin.png" alt="Linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/eknoor_uiux_designer/" target="_blank">
+                        <img src="Img/Social Icons/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="About-me">
+        <div class="Container-About-me">
+            <h1>Welcome to My Portfolio!</h1> 
+            <p>My name is Eknoor Kaur. I've loved design and art since I was a kid. I always analyze the designs around me and enjoy learning about them. It's not just a job for me; it's my passion.</p>
+            <p>My journey began when my brother introduced me to UI/UX design. I started with Figma and soon learned video editing, branding, and 3D modeling with Blender. My skills in sketching realistic portraits add a special touch to my work.</p> 
+            <p>I've worked on various projects like dashboards, websites, mobile apps, and visual content such as banners and posters. I'm especially proud of my work on projects that help the community. I enjoy new challenges and keep up with the latest design trends and technologies to make sure my work stays fresh and innovative.</p>
+            <p>Take a look at my portfolio to see some of my favorite projects. Thanks for visiting, and I look forward to working together on future design projects!.</p>
+        </div>
+    </div>
+
+    <div id="Skills">
+        <h1>SKILLS</h1>
+        <div class="Container-Skills">
+            <div class="skills-card advance">
+                <p><img src="Img/Social Icons/figma icon.png" alt="Figma Icon"> Figma</p>
+                <p><img src="Img/Social Icons/Adobe XD icon.png" alt="Adobe XD Icon"> Adobe XD</p>
+                <p><img src="Img/Social Icons/protopie icon.png" alt="Protopie Icon"> Protopie</p>
+                <p><img src="Img/Social Icons/openshot video icon.png" alt="Openshot Icon"> Openshot</p>
+            </div>
+            <div class="skills-card intermediate">
+                <p><img src="Img/Social Icons/Adobe Illustrator icon.png" alt="Adobe Illustrator Icon"> Adobe Illustrator</p>
+                <p><img src="Img/Social Icons/Web Flow.png" alt="Web Flow Icon"> Web Flow</p>
+                <p><img src="Img/Social Icons/Invision.png" alt="Invision Icon"> Invision</p>
+                <p><img src="Img/Social Icons/Miro icon.png" alt="Miro Icon"> Miro</p>
+            </div>
+            <div class="skills-card basic">
+                <p><img src="Img/Social Icons/Cavalry.png" alt="Cavalry Icon"> Cavalry</p>
+                <p><img src="Img/Social Icons/Blender.png" alt="Blender Icon"> Blender</p>
+                <p><img src="Img/Social Icons/HTML.png" alt="HTML Icon"> HTML</p>
+                <p><img src="Img/Social Icons/CSS.png" alt="CSS Icon"> CSS</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-contactme">
+        <div class="left-text">
+            <h1>Let's get</h1>
+            <h2>Connected</h2>
+        </div>
+        <div id="notification">Form submitted successfully!</div>
+        <div class="form-container">
+            <!---<h1>Send your message!</h1>--->
+            <form method="post" action="https://script.google.com/macros/s/AKfycbyUy1tPkK7HqMiLnmC4Z7B1yYyjatYTxYUyVCAYM9Zu3aVBCcqxzJTaD6jQ4YmchrVGAw/exec" name="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name...">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email...">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message..."></textarea>
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+        <script>
+            document.getElementById('customForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+    
+                const formData = new FormData(this);
+                const data = new URLSearchParams();
+    
+                for (const pair of formData.entries()) {
+                    data.append(pair[0], pair[1]);
+                }
+    
+                fetch('https://script.google.com/macros/s/AKfycbysZtm0ORpoWCnPUfzO-iNgIQLtHLlG1eo7srZ8mo7DXnbJlMNajsP0LNhfBgB-Lw0IBQ/exec', {
+                    method: 'POST',
+                    body: data
+                })
+                .then(response => response.text())
+                .then(result => {
+                    if (result.trim() === "Success") {
+                        showNotification();
+                        document.getElementById('customForm').reset();
+                        setTimeout(() => {
+                            window.location.href = 'about_me.html'; // Redirect to the "About Me" page after 3 seconds
+                        }, 3000);
+                    } else {
+                        alert('There was an error submitting the form');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting the form');
+                });
+            });
+    
+            function showNotification() {
+                const notification = document.getElementById('notification');
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000); // Notification will disappear after 3 seconds
+            }
+        </script>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Img/LOGO Eknoor Kaur.png" alt="Eknoor Kaur">
+            </div>
+            <div class="footer-contact">
+                <p>eknoor.ux.d@gmail.com</p>
+                <p>+1 (909) 401-6381</p>
+            </div>
+            <div class="footer-social-icons">
+                <a href="mailto:eknoor.ux.d@gmail.com"><img src="Img/Social Icons/gmail.png" alt="Gmail"></a>
+                <a href="https://www.linkedin.com/in/eknoor-kaur-801008196/"><img src="Img/Social Icons/linkedin-color.png" alt="LinkedIn"></a>
+                <a href="https://www.behance.net/eknoor_uiux_designer"><img src="Img/Social Icons/behence-color.png" alt="Behance"></a>
+                <a href="https://www.instagram.com/eknoor_uiux_designer//"><img src="Img/Social Icons/instagram -color.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 eknoorkaur. All rights reserved.</p>
+        </div>
+    </footer>
+    </body>
+    </html>
+
+</body>
+</html>
